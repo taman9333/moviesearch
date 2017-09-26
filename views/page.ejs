@@ -1,12 +1,21 @@
+<html>
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        
 <span style="margin-left:1.66%"><a href="/" style="color:blue"><button style="background-color:#eee; border:2px solid #93a9ff; height:40px">Back To Search Page</button></a></span>
 <h1 style="text-align:center; border:2px solid white; background-color:#f44336; width:200px; color:white; margin-left:42%; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">Search Page</h1>
 <% for(var i=0; i<data.Search.length; i++){ %>
-<div style="float:left; width:30%; height:500px; margin:1.66%">
-<%- '<a href="http://www.imdb.com/title/' + data.Search[i].imdbID + '" style="color:blue">' +  '<img style="height:400; width:400px" src="' + data.Search[i].Poster + '">' + '</a>'  %>
+<div id="style" style="float:left; margin:1.66%">
+    <div class="style">
+<%- '<a href="http://www.imdb.com/title/' + data.Search[i].imdbID + '" style="color:blue">' +  '<img src="' + data.Search[i].Poster + '">' + '</a>'  %>
 <p style="text-align:center">
     <%- '<strong style="color:#9F2D2D">' + data.Search[i].Title +  '</strong>'   %>
 </p>
-    <span style="margin-left:173px"><%= data.Search[i].Year %></span>
+    <span style="margin-left:173px" id="year"><%= data.Search[i].Year %></span>
+</div>
 </div>
 <% } %>
 <div style="text-align:center">
@@ -47,3 +56,6 @@
         <button>Next</button>
 </form>
 </div>
+
+</body>
+</html>
