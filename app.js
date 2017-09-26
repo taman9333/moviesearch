@@ -25,3 +25,4 @@ app.get('/s', function(req, res){
     });
 });
 
+app.listen(3000);
